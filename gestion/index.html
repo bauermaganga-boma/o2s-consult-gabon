@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>O2S Gestion — Espace interne</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#141c52">
+  <link rel="icon" type="image/png" href="../assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gestion.css">
+</head>
+<body>
+
+<div class="login" id="login">
+  <div class="login__card">
+    <img class="login__logo" src="../assets/img/logo.png" alt="Logo O2S Consult">
+    <h1>O2S Gestion</h1>
+    <p>Réservations, agenda, patients, consultations, paiements Airtel Money et documents médicaux.</p>
+    <button class="btn btn--pri btn--block" data-act="enter" style="min-height:48px">Accéder à l'espace de gestion</button>
+    <p class="login__note">Version de démonstration : les données affichées sont fictives et restent dans votre navigateur. En production, l'accès sera protégé par un compte et un mot de passe, et les données médicales hébergées de façon sécurisée.</p>
+    <a class="login__back" href="../">← Retour au site O2S Consult</a>
+    <p style="margin:1rem 0 0;font-size:.78rem;color:#8a97ad">Développé par <b style="color:#1d7fb8">Nendja</b></p>
+  </div>
+</div>
+
+<div class="app">
+  <aside class="side">
+    <a class="side__brand" href="#/dashboard"><img src="../assets/img/logo.png" alt=""><div><b>O2S Gestion</b><small>ESPACE INTERNE</small></div></a>
+    <nav id="nav" aria-label="Navigation de l'application"></nav>
+    <div class="side__foot">
+      <div class="user"><span class="avatar">DR</span><div><b>Dr (démo)</b><small>Médecin — administrateur</small></div></div>
+      <a class="side__link" href="../">← Retour au site</a>
+      <button class="side__link" data-act="logout">Se déconnecter</button>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="backbtn off" id="back" aria-label="Retour" data-act="back"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <a class="mobile-logo" href="#/dashboard" aria-label="Tableau de bord"><img src="../assets/img/logo.png" alt="" width="34" height="34"></a>
+      <div><h1 id="title">Tableau de bord</h1><span class="date" id="date"></span></div>
+      <span class="top__sp"></span>
+      <button class="btn btn--pri desk-only" data-act="new-rdv"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Nouveau rendez-vous</button>
+      <button class="btn btn--line btn--sm" data-act="logout" style="margin-left:.2rem" aria-label="Quitter">Quitter</button>
+    </header>
+    <main class="view" id="view"></main>
+  </div>
+</div>
+
+<nav class="tabbar" id="tabbar" aria-label="Navigation mobile"></nav>
+<div id="modals"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
